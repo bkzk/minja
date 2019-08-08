@@ -94,8 +94,7 @@ $ cd minja.app
 $ virtualenv venv --no-site-packages
 $ source venv/bin/activate
 
-(venv) $ git clone https://
-.com/bkzk/minja.git
+(venv) $ git clone https://github.com/bkzk/minja.git
 
 (venv) $ pip install -r minja/requirements.txt
 
