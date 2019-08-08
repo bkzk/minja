@@ -1,0 +1,6 @@
+pydns
+dkimpy == 0.6.1
+ipaddr
+pyspf == 2.0.12t
+authres
+python-magic
