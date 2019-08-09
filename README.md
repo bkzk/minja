@@ -1,10 +1,9 @@
-# minja 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/bkzk/screens/master/minja/logo128.png">
 </p>
 
-minja - is a tool design to test email security policies, SMTP session, authentication mechanism, run stress tests, enumerate users and message analyze
+**minja** - is a tool design to test email security policies, SMTP session, authentication mechanism, run stress tests, enumerate users and message analyze
 
 - menu oriented CLI based tool
 - feature-rich
