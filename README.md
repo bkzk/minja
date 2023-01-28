@@ -3,7 +3,7 @@
   <img src="https://raw.githubusercontent.com/bkzk/screens/master/minja/logo128.png">
 </p>
 
-**minja** - is a tool design to test email security policies, SMTP session, authentication mechanism, run stress tests, enumerate users and message analyze
+**minja** - is a tool designed to test email security policies, SMTP sessions, and authentication mechanisms, run stress tests, enumerate users, and analyze EML copy of the message
 
 - menu oriented CLI based tool
 - feature-rich
@@ -17,7 +17,7 @@ minja is here to help you with
 
 
 - test email security policies and SMTP session
-- learn about SMTP protocol and email authentication mechanism like SPF and DKIM
+- learn about SMTP protocol and email authentication mechanisms like SPF and DKIM
 - diagnostic SMTP
 - investigate vulnerabilities
 - analyze messages
@@ -26,7 +26,7 @@ Beneficial for:
 
 - system administrators
 - security investigators
-- pentesters
+- pen-testers
 - support engineers
 
 ## DISCLAIMER
@@ -36,7 +36,7 @@ This tool for LEGAL testing purposes only!
 
 ## Requirement
 
-minja is written in python 2.7 so you may need to install it.  In such case I would recommend you to get familiar with  https://github.com/pyenv/pyenv.
+minja is written in python 2.7.  In case it is not found on your system consider getting familiar with  https://github.com/pyenv/pyenv.
 
 
 ### Python 2.7 requirement:
@@ -50,9 +50,9 @@ ipaddr
 authres
 ```
 
-To start working with DKIM signing and verification feature please install dkimpy module (version 0.6.1) and pydns which is required for this module. There is an older version of this module called pydkim and is available in version 0.3.1 - do not install this module as they are not compatibile. Please also avoid installing module dnspython which can be in conflict with pydns.
+To start working with DKIM signing and verification feature please install dkimpy module (version 0.6.1) and pydns which are required for this module. There is an older version of this module called pydkim which is available in version 0.3.1 - do not install this module as they are not compatible. Please also avoid installing module dnspython which can conflict with pydns.
 
-To use the SPF verification and validation feature please install pyspf in the latest 2.0.12t version as it seems this is the only version which is working properly with python 2.7 and required modules ipaddr and pydns. An additional modules authres is partially used to parse Authentication-Results header field.
+To use the SPF verification and validation feature please install pyspf in the latest 2.0.12t version as it seems this is the only version that is working properly with python 2.7 and the required modules ipaddr and pydns. An additional module authres is partially used to parse the Authentication-Results header field.
 
 
 ### Installation
@@ -110,8 +110,7 @@ $ source venv/bin/activate
 $ deactivate
 ```
 
-The zipped code in minja.bin can be easiy copy to your /usr/local/bin directory as long you installed required modules in system paths.
-When you use a minja.bin you may want to export PYTHONPATH where the libs are installed. Please see Issue#Missing module section
+The zipped code in minja.bin can be easily copied to your /usr/local/bin directory as long you have installed all the required modules in system paths. When you use a minja.bin sometimes you may want to export PYTHONPATH where the libs are installed. Please see Issue#Missing module section
 
 
 
@@ -126,13 +125,13 @@ Soon ..
 
 ### Environments variable
 
-By default minja is using some of local shell variable to determine the default settings like smtp hostname, helo name, sender and recipient address.
-- The localhost and port 25 are used by default for SMTP host.
-- The local username and hostname are used to set a default sender address. If username can not be determined the postmaster name is used for local part address.
+By default, minja is using some of the local shell variables to determine the default settings like SMTP hostname, HELO name, sender, and recipient address.
+- The localhost and port 25 are used by default for the SMTP host.
+- The local username and hostname are used to set a default sender address. If the username can not be determined the postmaster's name is used for the local part address.
 
 #### MFROM= and RCPTTO=
 
-Envelope sender and recipients addresses can be also defined with local shell variables. By exporting one or both of below environment variable the default sender and/or recipient addresses can be set. You can set these variable for your current shell session, per instance or globally with your shell rc file (e.g. ~/.bashrc).
+Envelope sender and recipient addresses can be also defined with local shell variables. By exporting one or both of the below environment variables the default sender and/or recipient addresses can be set. You can set these variables for your current shell session, per instance, or globally with your shell RC file (e.g. ~/.bashrc).
 
 ```
 # export for bash session
@@ -142,13 +141,13 @@ $ export RCPTTO=b@domain.com
 
 ```
 ```
-# export only for single instance, place them before command
+# export only for a single instance, place them before the command
 $ MFROM=a@example.com RCPTTO=b@domain.com minja
 ```
 
 #### EDITOR=
 
-Default editor is set to Vim, so if you have a different preferences and there is a big chance you have, than editor defined by an environment EDITOR variable is used. If your system or your local environment does not export this variable please do it yourself to use your prefer editor. For example to use a nano:
+The default editor is set to Vim. If you have different preferences and there is a big chance you have, then the editor defined by an environment EDITOR variable is used. If your system or your local environment does not export this variable please do it yourself using your preferred editor. For example to use nano:
 
 ```
 # per bash session
@@ -167,7 +166,7 @@ EDITOR=nano minja
 
 #### Missing module
 
-You have installed module but python returns "ImportError: No module named ...".
+You have installed the module but python returns "ImportError: No module named ...".
 Please check the path where the module is installed and export this path to your bash environment.
 
 ```
@@ -182,4 +181,4 @@ $ export PYTHONPATH="$PYTHONPATH:/usr/local/lib/python2.7/site-packages/"
 
 ## Author
 
-Written by: Bartosz Kozak (C) 2016-2019
+Written by: Bartosz Kozak (C) 2016-2023
